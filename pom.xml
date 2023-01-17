@@ -14,7 +14,7 @@
     <name>test_spring_github_azure</name>
     <description>test_spring_github_azure</description>
     <properties>
-        <java.version>17</java.version>
+        <java.version>11</java.version>
     </properties>
     <dependencies>
         <dependency>

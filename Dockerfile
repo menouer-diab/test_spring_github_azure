@@ -2,7 +2,7 @@
 # Build stage
 #
 
-FROM maven:3.8.3-openjdk-17 AS build
+FROM maven:3.6.3-jdk-11-slim AS build
 
 WORKDIR usr/src/app
 
@@ -14,7 +14,7 @@ RUN mvn clean package
 # Package stage
 #
 
-FROM openjdk:17-alpine
+FROM openjdk:11-jre-slim
 
 ARG JAR_NAME="test_spring_github_azure"
 
