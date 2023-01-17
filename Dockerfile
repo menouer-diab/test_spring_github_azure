@@ -2,7 +2,7 @@
 # Build stage
 #
 
-FROM maven:3.6.3-jdk-11-slim AS build
+FROM maven:3.8-eclipse-temurin-17-alpine AS build
 
 WORKDIR usr/src/app
 
@@ -14,9 +14,9 @@ RUN mvn clean package
 # Package stage
 #
 
-FROM openjdk:11-jre-slim
+FROM openjdk:17-alpine
 
-ARG JAR_NAME="test_spring_github_azure"
+ARG JAR_NAME="spring-boot-helloworld"
 
 WORKDIR /usr/src/app
 
