@@ -16,7 +16,7 @@ RUN mvn clean package
 
 FROM openjdk:17-alpine
 
-ARG JAR_NAME="spring-boot-helloworld"
+ARG JAR_NAME="test_spring_github_azure"
 
 WORKDIR /usr/src/app
 
