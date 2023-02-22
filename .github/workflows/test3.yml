@@ -1,17 +1,7 @@
 name: test3
 on:
   push:
-  workflow_dispatch:
-    inputs:
-      GlobeEnvironment:
-        description: "The name of a Globe12 Environment"
-        required: true
-        default: "none"
-        type: string
-      logLevel:
-        description: "Log level"
-        required: true
-        default: "warning"
+
 jobs:
   job1:
     runs-on: ubuntu-latest
@@ -24,7 +14,6 @@ jobs:
         run: |
           echo hello
           echo "VAR1=${{env.VAR1}}"
-          echo "GlobeEnvironment=${{env.GlobeEnvironment}}"
       - run: echo ooo > o.txt
       - run: cat o.txt
   job2:
