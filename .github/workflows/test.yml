@@ -25,6 +25,8 @@ jobs:
           echo hello
           echo "VAR1=${{env.VAR1}}"
           echo "GlobeEnvironment=${{env.GlobeEnvironment}}"
+      - run: echo ooo > o.txt
+      - run: cat o.txt
   job2:
     runs-on: ubuntu-latest
     name: A job to say hello
